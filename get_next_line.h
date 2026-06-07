@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:59:28 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:41:04 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/06/07 09:56:02 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*cln_r(char *ptr);
 char	*ext_l(char *ptr);
 char	*read_fd(int fd, char *reds);
 
+size_t	ft_strlen(char *s);
 int		search_nline(char *ptr);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 

@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:58:38 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:32:38 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/06/07 09:53:31 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,18 +69,14 @@ char	*cln_r(char *ptr)
 	int		cont;
 	int		cont2;
 	char	*rest;
-	int		len;
 
-	len = 0;
 	cont = 0;
 	cont2 = 0;
 	while (ptr[cont] && ptr[cont] != '\n')
 		cont++;
 	if (!ptr[cont])
 		return (free(ptr), NULL);
-	while (ptr[len])
-		len++;
-	rest = malloc(sizeof(char) * (len - cont));
+	rest = malloc(sizeof(char) * (ft_strlen(ptr) - cont));
 	if (!rest)
 		return (free(ptr), NULL);
 	while (ptr[++cont])

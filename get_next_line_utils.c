@@ -6,11 +6,21 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 09:29:45 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:30:24 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/06/07 09:55:11 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+size_t	ft_strlen(char *s)
+{
+	int	cont;
+
+	cont = 0;
+	while (s[cont])
+		cont++;
+	return (cont);
+}
 
 int	search_nline(char *ptr)
 {
