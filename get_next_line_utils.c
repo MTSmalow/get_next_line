@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 09:29:45 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:55:11 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/06/07 10:57:21 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	}
 	if (!s2)
 		return (NULL);
-	joined = (char *)malloc(sizeof (char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	joined = (char *)malloc(sizeof (char)
+			* (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!joined)
 		return (free(s1), NULL);
 	while (s1[++i])
