@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:58:38 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:53:31 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/07/16 10:39:29 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,8 @@ char	*cln_r(char *ptr)
 		cont2++;
 	}
 	rest[cont2] = '\0';
-	return (free(ptr), rest);
+	free(ptr);
+	return (rest);
 }
 
 char	*get_next_line(int fd)
