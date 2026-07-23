@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:59:28 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/06/07 09:56:02 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/07/23 13:15:13 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+char	*free_ret(char *point, char *ret);
 char	*get_next_line(int fd);
 char	*cln_r(char *ptr);
 char	*ext_l(char *ptr);

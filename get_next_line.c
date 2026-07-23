@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:58:38 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/07/16 10:39:29 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/07/23 13:00:53 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,11 @@ char	*read_fd(int fd, char *reds)
 	{
 		byt_red = read(fd, buffer, BUFFER_SIZE);
 		if (byt_red == -1)
-		{
-			free(buffer);
-			return (NULL);
-		}
+			return (free_ret(buffer, NULL));
 		buffer[byt_red] = '\0';
 		reds = ft_strjoin_gnl(reds, buffer);
 	}
-	free(buffer);
-	return (reds);
+	return (free_ret(buffer, reds));
 }
 
 char	*ext_l(char *ptr)
@@ -75,18 +71,17 @@ char	*cln_r(char *ptr)
 	while (ptr[cont] && ptr[cont] != '\n')
 		cont++;
 	if (!ptr[cont])
-		return (free(ptr), NULL);
+		return (free_ret(ptr, NULL));
 	rest = malloc(sizeof(char) * (ft_strlen(ptr) - cont));
 	if (!rest)
-		return (free(ptr), NULL);
+		return (free_ret(ptr, NULL));
 	while (ptr[++cont])
 	{
 		rest[cont2] = ptr[cont];
 		cont2++;
 	}
 	rest[cont2] = '\0';
-	free(ptr);
-	return (rest);
+	return (free_ret(ptr, rest));
 }
 
 char	*get_next_line(int fd)
